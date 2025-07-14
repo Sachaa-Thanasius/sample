@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: sample-app
+spec:
+  generators:
+    - git:
+      repoURL: https://github.com/Sachaa-Thanasius/sample.git
+      revision: HEAD
+      directories:
+        - path: app/demo/overlays/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/Sachaa-Thanasius/sample.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{path.basename}}'
