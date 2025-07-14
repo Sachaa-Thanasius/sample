@@ -5,10 +5,10 @@ metadata:
 spec:
   generators:
     - git:
-      repoURL: https://github.com/Sachaa-Thanasius/sample.git
-      revision: HEAD
-      directories:
-        - path: app/demo/overlays/*
+        repoURL: https://github.com/Sachaa-Thanasius/sample.git
+        revision: HEAD
+        directories:
+          - path: app/demo/overlays/*
   template:
     metadata:
       name: '{{path.basename}}'
