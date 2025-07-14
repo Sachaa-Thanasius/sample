@@ -12,8 +12,8 @@ spec:
       labels:
         app: nginx-app
     spec:
-      nodeSelector:
-        tushaar: "true"
+      # nodeSelector:
+      #   tushaar: "true"
       containers:
         - name: nginx
           image: nginx:latest
