@@ -5,11 +5,8 @@ metadata:
 spec:
   template:
     spec:
-      containers:
-        - name: nginx
-          image: nginx:stable
       tolerations:
-        - key: "prod"
+        - key: "dev"
           operator: "Exists"
           effect: "NoSchedule"
           value: "true"

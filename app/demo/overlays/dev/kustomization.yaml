@@ -6,3 +6,4 @@ resources:
   - namespace.yaml
 patches:
   - path: patch_configmap.yaml
+  - path: patch_deployment.yaml
