@@ -10,6 +10,6 @@ spec:
           image: nginx:stable
       tolerations:
         - key: "prod"
-          operator: "Exists"
+          operator: "Equals"
           effect: "NoSchedule"
           value: "true"

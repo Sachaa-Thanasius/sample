@@ -7,6 +7,6 @@ spec:
     spec:
       tolerations:
         - key: "dev"
-          operator: "Exists"
+          operator: "Equals"
           effect: "NoSchedule"
           value: "true"
