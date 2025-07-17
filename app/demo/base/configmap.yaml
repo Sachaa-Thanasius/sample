@@ -10,3 +10,4 @@ data:
         return 200 'Hello from Tushaar!\n';
       }
     }
+  foo: bar
